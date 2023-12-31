@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugestões e Reclamações</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Imgs/coracao.avif" type="image/png">
+</head>
+<body>
+    <nav>
+        <ul class="navbar">
+            <li><a href="principal.html">ÍNICIO</a></li>
+            <li><a href="https://open.spotify.com/playlist/5K5t1h7r0ewoOwWG7YT9y1?si=1e36b115a96a4355" onclick="loadQuote(getDayOfYear());">NOSSA PLAYLIST</a></li>
+            <li><a href="feedback.html" onclick="loadQuote(getDayOfYear());">SUGESTÕES</a></li>
+            <li><a href="feedback.html" onclick="loadQuote(getDayOfYear());">RECLAMAÇÕES</a></li>
+            <li><a href="messages.html" onclick="loadQuote(getDayOfYear());">VER MENSAGENS ANTERIORES</a></li>
+        </ul>
+    </nav>
+    <h1>Sugestões e Reclamações</h1>
+    <div id="feedback-box">
+               <textarea id="feedback-text" rows="4" cols="50" placeholder="Escreva sua mensagem..."></textarea>
+    </div>
+    <div class="buttons">
+        <button id="happy-button" onclick="sendFeedback('carinho')">Enviar com 😊</button>
+        <button id="angry-button" onclick="sendFeedback('raiva')">Enviar com 😠</button>
+    </div>
+    <div id="signature">Adilson Krischanski</div>
+    <script src="script.js"></script>
+</body>
+</html>

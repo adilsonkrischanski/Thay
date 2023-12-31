@@ -1,0 +1,176 @@
+/* styles.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color: #f6f6f6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+nav {
+    background-color: #333;
+    width: 100%;
+    position: fixed; /* Torna a barra de navegação fixa no topo */
+    top: 0; /* Coloca a barra no topo da página */
+    z-index: 100; /* Garante que a barra de navegação esteja sobre outros elementos */
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+h1 {
+    color: #d9534f;
+    margin-top: 60px; /* Ajusta a margem para deixar espaço para a barra de navegação fixa */
+}
+
+#feedback-box {
+    border: 2px solid #5bc0de; /* Cor da borda da caixa de texto */
+    border-radius: 10px;
+    padding: 20px;
+    width: 60%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#feedback-text {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.buttons button {
+    flex: 1; /* Ocupa a largura disponível igualmente */
+    margin-right: 5px;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#happy-button {
+    background-color: #5cb85c; /* Verde para carinho */
+}
+
+#angry-button {
+    background-color: #d9534f; /* Vermelho para raiva */
+}
+
+#quote-box {
+    border: 2px solid #d9534f;
+    border-radius: 10px;
+    padding: 20px;
+    width: 60%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#quote {
+    font-style: italic;
+    color: #333;
+}
+
+#quote-date {
+    font-size: 14px;
+    color: #777;
+}
+
+#signature {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 14px;
+    color: #777;
+}
+
+label {
+    font-size: 18px;
+}
+
+#select-date {
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#message-box {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* Adição da margem ao redor da caixa */
+.quote-box {
+    margin: 20px;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    #select-date {
+        width: 80%;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    #message-box {
+        font-size: 14px;
+    }
+
+    #quote-box {
+        width: 80%;
+    }
+}
