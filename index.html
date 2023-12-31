@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thay</title>
+    <link rel="icon" href="imagens/core.ico" type="image/png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 20px;
+            width: 400px;
+            display: flex;
+            align-items: center;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 5px;
+            background-image: url('imagens/tu_tb.jpeg');
+            background-size: cover;
+            margin-right: 20px;
+        }
+
+        .login-fields {
+            flex: 1;
+            text-align: left;
+
+        }
+
+        .login-fields input {
+            width: 80%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-left: 30%;
+        }
+
+        #password-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="avatar"></div>
+        
+        <div class="login-fields">
+            <input type="text" id="username" value="Thayná Santos" readonly>
+            <input type="password" id="password" placeholder="Senha">
+            <button class="login-button" onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <div id="password-popup">
+        <span class="close-button" onclick="closePopup()">&times;</span>
+        <p>Se você não sabe a senha, não merece ver o que tem aqui.</p>
+    </div>
+
+    <script>
+        function login() {
+            var password = document.getElementById("password").value;
+
+            if (password === "krischanski") {
+                // Redirecionar para outra página se a senha estiver correta
+                window.location.href = "principal.html";
+            } else {
+                // Exibir o popup se a senha estiver incorreta
+                document.getElementById("password-popup").style.display = "block";
+            }
+        }
+
+        function closePopup() {
+            document.getElementById("password-popup").style.display = "none";
+        }
+    </script>
+</body>
+</html>
